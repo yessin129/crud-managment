@@ -1,3 +1,6 @@
+<?php
+include_once "db.conn.php";
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -12,3 +15,8 @@
 
 </body>
 </html>
+
+<?php
+$object = new dbh()
+$object->
+?>
