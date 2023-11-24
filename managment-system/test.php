@@ -8,7 +8,7 @@
     <title>main page</title>
 </head>
 <body>
-<h1>goeiemorgen</h1>
+<h1>main page</h1>
 
 </body>
 </html>
