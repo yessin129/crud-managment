@@ -17,6 +17,6 @@ include_once "db.conn.php";
 </html>
 
 <?php
-$object = new dbh()
-$object->
+$object = new dbh();
+$object->connect();
 ?>
