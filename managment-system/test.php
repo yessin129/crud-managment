@@ -1,5 +1,5 @@
-<?php
-include_once "db.conn.php";
+
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -12,11 +12,14 @@ include_once "db.conn.php";
 </head>
 <body>
 <h1>main page</h1>
+ 
 
 </body>
 </html>
 
 <?php
-$person1 =  new person("daniel", "blue",28);
-echo $person1->name;
+
+new person("yessi")
 ?>
+
+
