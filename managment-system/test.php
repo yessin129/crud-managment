@@ -1,6 +1,6 @@
-
-
+<?php require "oefenen.php";
 ?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -19,7 +19,11 @@
 
 <?php
 
-new person("yessi")
+ $person1 = new person("yessin","rood","25");
+echo $person1->eycolor;
+echo $person1->age;
+
+
 ?>
 
 

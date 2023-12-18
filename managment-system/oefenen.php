@@ -10,3 +10,13 @@ class person{
         $this->eycolor = $eycolor;
         $this->age = $age;
     }
+
+    //methods
+
+    public function setName ($name) {
+        $this->name =$name;
+}
+
+
+
+}
