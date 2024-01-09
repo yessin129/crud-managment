@@ -17,11 +17,6 @@
 </body>
 </html>
 
-<?php
-
- $person1 = new person("yessin","rood","25");
-echo $person1->eycolor;
-echo $person1->age;
 
 
 ?>

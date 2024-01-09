@@ -1,8 +1,8 @@
 <?php
 
-class create extends connect {
-    public function __construct() {
-        parent::__construct(); // Assuming connect is the parent class with a constructor
+class crud extends dbh {
+    public function create () {
+
 
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $username = $_POST["username"];
@@ -10,11 +10,9 @@ class create extends connect {
             $email = $_POST["email"];
 
             try {
-                require_once "db.conn.php"; // Assuming this file contains database connection logic
                 $query = "INSERT INTO users (username, password, email) VALUES (?, ?, ?)";
                 $stmt = $this->pdo->prepare($query);
                 $stmt->execute([$username, $password, $email]);
-                // You may want to add additional logic here, such as error handling or redirecting after successful insertion
             } catch (PDOException $e) {
                 die("Query failed: " . $e->getMessage());
             }
