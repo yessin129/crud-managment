@@ -1,31 +1,30 @@
 <?php
 
-class dbh {
+class Dbh {
     private $username;
     private $servername;
     private $dbname;
     private $password;
 
-    public function connect(){
+    public function connect (){
         $this->username = "root";
         $this->password = "root";
-        $this->dbname = "manegmentsystem";
-        $this->servername = "localhost:3306";
+        $this->dbname = "manegementsystem";
+        $this->servername = "localhost";
 
         try {
-            $dsn = "mysql:host=" . $this->servername . ";dbname=" . $this->dbname;
+            $dsn = "mysql:host=localhost;dbname=managementsystem";
+//            $dsn = "mysql:host=" . $this->servername . ";dbname=" . $this->dbname;
             $pdo = new PDO($dsn, $this->username, $this->password);
-            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            //$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
-            echo "connectie gelukt";
+return $pdo;
 
         } catch (PDOException $e) {
             echo "Did not connect successfully: " . $e->getMessage();
         }
     }
 
+}
 
-
-
-
-};

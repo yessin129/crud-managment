@@ -1,4 +1,5 @@
-<?php require "oefenen.php";
+<?php require "classes.php";
+
 ?>
 
 <!doctype html>
@@ -12,13 +13,18 @@
 </head>
 <body>
 <h1>main page</h1>
- 
+
+
 
 </body>
 </html>
+<?php
+
+$testobj = new test();
+$testobj->getUsers();
 
 
 
-?>
+
 
 
