@@ -20,7 +20,6 @@ class Test  {
 }
 
 
-
 $tiago = new Test();
 
 $tiago->getUsers();
