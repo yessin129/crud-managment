@@ -1,35 +1,34 @@
-<?php
 
-class Crud {
 
-    public function create() {
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            $username = $_POST["username"];
-            $email = $_POST["email"];
-            $phone = $_POST["phone"];
 
-            try {
-                require_once "db.conn.php";
-               $query = "INSERT INTO users";
-            } catch (PDOException $e) {
-                die("Query failed: " . $e->getMessage());
-            }
-        } else {
-           header("location: ./form create users.php");
+
+
+
+
+
+include "db.conn.php";
+class Test  {
+
+    public function getUsers (){
+        $sql = "SELECT * FROM users";
+
+        $dbhdbh = new Dbh();
+        $conn = $dbhdbh->connect();
+        $stmt = $conn->query($sql);
+        while ($row = $stmt->fetchAll()){
+            echo $row;  '<br>';
         }
     }
+    public function getUsersstmt ($username,$password){
+
+        $sql = "SELECT * FROM users WHERE username = ?  AND password =? ";
+    }
+
 }
 
-?>
 
 
 
+$tiago = new Test();
 
-
-
-
-
-
-
-
-
+$tiago->getUsers();
