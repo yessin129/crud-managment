@@ -5,7 +5,7 @@ class Dbh {
     private $servername;
     private $dbname;
     private $password;
-
+/// verbind met de database
     public function connect (){
         $this->username = "root";
         $this->password = "root";
