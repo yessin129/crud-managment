@@ -1,4 +1,4 @@
-
+<?php
 
 
 
@@ -22,14 +22,25 @@ class Test  {
     public function getUsersstmt ($username,$password){
 
         $sql = "SELECT * FROM users WHERE username = ?  AND password =? ";
+        $dbhdbh = new Dbh();
+        $conn = $dbhdbh->connect();
+        $stmt = $conn->prepare($sql);
+        $stmt->execute([$username,$password]);
+        $names = $stmt->fetchAll();
+        foreach ($names as $name){
+            echo $name["username"];
+        }
+        }
     }
 
-}
+
+
+
 
 
 
 
 
 $tiago = new Test();
+$tiago->getUsersstmt("yessin","yo                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               ");
 
-$tiago->getUsers();

@@ -5,7 +5,7 @@ class Dbh {
     private $servername;
     private $dbname;
     private $password;
-
+/// verbind met de database
     public function connect (){
         $this->username = "root";
         $this->password = "root";
@@ -13,11 +13,12 @@ class Dbh {
         $this->servername = "localhost";
 
         try {
-            $dsn = "mysql:host=localhost;dbname=managementsystem";
+            $dsn = "mysql:host=localhost;dbname=manegementsystem";
 //            $dsn = "mysql:host=" . $this->servername . ";dbname=" . $this->dbname;
             $pdo = new PDO($dsn, $this->username, $this->password);
             //$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
 
 return $pdo;
 
