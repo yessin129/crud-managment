@@ -20,7 +20,8 @@ class Dbh {
             $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
 
-return $pdo;
+
+         return $pdo;
 
         } catch (PDOException $e) {
             echo "Did not connect successfully: " . $e->getMessage();
